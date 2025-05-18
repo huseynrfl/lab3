@@ -3,102 +3,139 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>MY CV</title>
+    <title>Hüseyn Rəfili</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <div class="container">
-        <!-- LEFT SIDE -->
         <div class="sidebar">
             <img src="photos/profile.jpg" alt="" class="profile-picture"/>
 
-            <!-- CONTACT INFO -->
             <div class="left-acc-container">
                 <div class="accordion-item">
                     <button class="accordion-btn">
-                        <img src="photos/contact.png" alt="" class="btn-icon"> CONTACT
-                    </button>
-                    <div class="accordion-panel" id="contactInfo"></div>
+                        <img src="photos/contact.png" alt="" class="btn-icon">
+                        CONTACT</button>
+                    <div class="accordion-panel">
+                        <p><img src="photos/phone.png" alt="" class="icon"> <div id="no"></div></p>
+                        <p><img src="photos/email.png" alt="" class="icon"> <div id="email"></div></p>
+                        <p><img src="photos/location.png" alt="" class="icon"> <div id="location"></div></p>
+                    </div>
                 </div>
 
                 <div class="accordion-item">
                     <button class="accordion-btn">
-                        <img src="photos/social-media.png" alt="" class="btn-icon"> SOCIAL MEDIA
-                    </button>
-                    <div class="accordion-panel" id="socialMedia"></div>
+                        <img src="photos/social-media.png" alt="" class="btn-icon">
+                        SOCIAL MEDIA</button>
+                    <div class="accordion-panel">
+                        <p><img src="photos/instagram.png" alt="" class="icon"> <div id="instagram"></div></p>
+                        <p><img src="photos/tik-tok.png" alt="" class="icon"> <div id="tiktok"></div></p>
+                        <p><img src="photos/github.png" alt="" class="icon"> <div id="github"></div></p>
+                    </div>
                 </div>
 
                 <div class="accordion-item">
                     <button class="accordion-btn">
-                        <img src="photos/education.png" alt="" class="btn-icon"> EDUCATION
-                    </button>
-                    <div class="accordion-panel" id="educationInfo"></div>
+                        <img src="photos/education.png" alt="" class="btn-icon">
+                        EDUCATION</button>
+                    <div class="accordion-panel" id="education">
+                        
+                    </div>
                 </div>
 
                 <div class="accordion-item">
                     <button class="accordion-btn">
-                        <img src="photos/skill.png" alt="" class="btn-icon"> SKILLS
-                    </button>
-                    <div class="accordion-panel" id="skillsInfo"></div>
+                        <img src="photos/skill.png" alt="" class="btn-icon">
+                        SKILLS</button>
+                    <div class="accordion-panel" id="skill">
+                        
+                    </div>
+                    <input type="text" id="skill-input" placeholder="Enter skill">
+                    <button id="addskill" onclick="addSkill()">Add</button>
                 </div>
 
                 <div class="accordion-item">
                     <button class="accordion-btn">
-                        <img src="photos/language.png" alt="" class="btn-icon"> LANGUAGES
-                    </button>
-                    <div class="accordion-panel" id="languagesInfo"></div>
+                        <img src="photos/language.png" alt="" class="btn-icon">
+                        LANGUAGES</button>
+                    <div class="accordion-panel" id="language">
+                        
+                    </div>
+                    <input type="text" id="language-input" placeholder="Enter language">
+                    <button id="addlanguage" onclick="addLanguage()">Add</button>
                 </div>
             </div>
         </div>
 
-        <!-- RIGHT SIDE -->
         <div class="main-content">
-            <button id="editBtn" class="edit-button">Edit</button>
-            <h1 id="userName"></h1>
-            <h3 id="userTitle"></h3>
+            <h1 id="name">HÜSEYN <span class="highlight">RƏFİLİ</span></h1>
+            <h3 id="title">STUDENT</h3>
             <hr class="title-line" />
 
             <div class="right-acc-container">
                 <div class="accordion-item">
                     <button class="accordion-btn">
-                        <img src="photos/profile.png" alt="" class="btn-icon"> PROFILE
-                    </button>
-                    <div class="accordion-panel" id="profileInfo"></div>
+                        <img src="photos/profile.png" alt="" class="btn-icon">
+                        PROFILE</button>
+                    <div class="accordion-panel" id="profile-info">
+                        
+                    </div>
                 </div>
 
                 <div class="accordion-item">
                     <button class="accordion-btn">
-                        <img src="photos/work-experience.png" alt="" class="btn-icon"> WORK EXPERIENCE
-                    </button>
-                    <div class="accordion-panel" id="workExperience"></div>
+                        <img src="photos/work-experience.png" alt="" class="btn-icon">
+                        WORK EXPERIENCE</button>
+                    <div class="accordion-panel" id="experience">
+                       
+                    </div>
                 </div>
 
                 <div class="accordion-item">
                     <button class="accordion-btn">
-                        <img src="photos/reference.png" alt="" class="btn-icon"> REFERENCE
-                    </button>
-                    <div class="accordion-panel" id="referenceInfo"></div>
+                        <img src="photos/reference.png" alt="" class="btn-icon">
+                        REFERENCE</button>
+                    <div class="accordion-panel" id="reference">
+                    </div>
                 </div>
 
                 <div class="accordion-item">
                     <button class="accordion-btn">
-                        <img src="photos/certificate.png" alt="" class="btn-icon"> CERTIFICATIONS
-                    </button>
-                    <div class="accordion-panel" id="certificationsInfo"></div>
+                        <img src="photos/certificate.png" alt="" class="btn-icon">
+                        CERTIFICATIONS</button>
+                    <div class="accordion-panel" id="certification">
+                       
+                    </div>
                 </div>
 
                 <div class="accordion-item">
                     <button class="accordion-btn">
-                        <img src="photos/project.png" alt="" class="btn-icon"> PROJECTS
-                    </button>
-                    <div class="accordion-panel" id="projectsInfo"></div>
+                        <img src="photos/project.png" alt="" class="btn-icon">
+                        PROJECTS</button>
+                    <div class="accordion-panel" id="project">
+                        
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"></script>
-    <script src="script.js"></script>
+<script>
+const accordionButtons = document.querySelectorAll('.accordion-btn');
+accordionButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const panel = button.nextElementSibling;
+        
+        if (panel.classList.contains('active')) {
+            panel.style.maxHeight = null;
+            panel.classList.remove('active');
+        } else {
+            panel.classList.add('active');
+            panel.style.maxHeight = "300px";
+        }
+    });
+});
+</script>
+<script src="script.js"></script>
 </body>
 </html>
